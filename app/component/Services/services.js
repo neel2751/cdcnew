@@ -23,14 +23,21 @@ const ServiceCard = ({ image, name, description, link }) => {
             alt="new thing"
             width={1300}
             height={800}
-            priority
+            // priority
+            loading="lazy"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+            // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           <div className="p-5">
-            <h5
+            <h2
               className={`cursor-pointer transition-all duration-300 group-hover:bg-gradient-to-r from-red-500 via-green-500 to-blue-500 bg-clip-text group-hover:text-transparent mb-2 text-xl font-semibold tracking-tight text-[#242A3D]`}
             >
               {name}
-            </h5>
+            </h2>
             <p className="mb-3 font-normal text-[#242A3D] opacity-70">
               {description}
             </p>

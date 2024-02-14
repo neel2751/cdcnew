@@ -3,22 +3,22 @@ import React from "react";
 const Testimonials = () => {
   return (
     // <!-- Testimonials -->
-    <section className="py-20">
+    <section className="xl:py-20">
       <div className="px-24 space-y-4 max-w-2xl">
-        <span className="text-blue-500 font-semibold pl-6 relative before:absolute before:top-1/2 before:left-0 before:w-5 before:h-px before:bg-blue-600 dark:before:bg-blue-500 before:rounded-full">
+        <span className="text-blue-800 font-semibold pl-6 relative before:absolute before:top-1/2 before:left-0 before:w-5 before:h-px before:bg-blue-600  before:rounded-full">
           Happy Clients
         </span>
-        <h1 className="font-bold text-gray-800 text-3xl">
+        <h5 className="font-bold text-gray-800 text-3xl">
           Client’s Say About Us
-        </h1>
+        </h5>
       </div>
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         {/* <!-- Grid --> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* <!-- Card --> */}
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700">
+          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl  dark:border-gray-700">
             <div className="flex-auto p-4 md:p-6">
-              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl dark:text-white">
+              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl ">
                 <em>
                   "Sai and Narendra and the team were so helpful. I wish I had
                   started my job with their architect who helped me sort out the
@@ -33,18 +33,18 @@ const Testimonials = () => {
             </div>
 
             <div className="p-4 rounded-b-xl md:px-6">
-              <h3 className="text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200">
+              <h6 className="text-sm font-semibold text-gray-800 sm:text-base">
                 Christopher S
-              </h3>
-              <p className="text-sm text-gray-500">03/Jun/2023</p>
+              </h6>
+              <p className="text-sm text-gray-600">03/Jun/2023</p>
             </div>
           </div>
           {/* <!-- End Card --> */}
 
           {/* <!-- Card --> */}
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700">
+          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl  dark:border-gray-700">
             <div className="flex-auto p-4 md:p-6">
-              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl dark:text-white">
+              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl ">
                 <em>
                   "Creative Design and Construction has just completed a
                   complete renovation of our house in Dagenham over the past 3
@@ -60,18 +60,18 @@ const Testimonials = () => {
             </div>
 
             <div className="p-4 rounded-b-xl md:px-6">
-              <h3 className="text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200">
+              <h6 className="text-sm font-semibold text-gray-800 sm:text-base ">
                 Silviya Barrett
-              </h3>
-              <p className="text-sm text-gray-500"> 02/Jun/2023</p>
+              </h6>
+              <p className="text-sm text-gray-600"> 02/Jun/2023</p>
             </div>
           </div>
           {/* <!-- End Card --> */}
 
           {/* <!-- Card --> */}
-          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700">
+          <div className="flex flex-col bg-white border border-gray-200 shadow-sm rounded-xl  dark:border-gray-700">
             <div className="flex-auto p-4 md:p-6">
-              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl dark:text-white">
+              <p className="mt-3 sm:mt-6 text-base text-gray-800 md:text-xl ">
                 <em>
                   "I am delighted to come across Creative Design and
                   Construction after dreadful few months dealing with
@@ -88,10 +88,10 @@ const Testimonials = () => {
             </div>
 
             <div className="p-4 rounded-b-xl md:px-6">
-              <h3 className="text-sm font-semibold text-gray-800 sm:text-base dark:text-gray-200">
+              <h6 className="text-sm font-semibold text-gray-800 sm:text-base ">
                 Jimmy Flynn
-              </h3>
-              <p className="text-sm text-gray-500">10/Jun/2023</p>
+              </h6>
+              <p className="text-sm text-gray-600">10/Jun/2023</p>
             </div>
           </div>
           {/* <!-- End Card --> */}

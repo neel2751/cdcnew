@@ -14,10 +14,42 @@ import {
 import Img from "../Img/Img";
 
 const Navbar = () => {
+  //active link change text colour
+  const SocialLinks = [
+    {
+      id: 1,
+      icon: <Facbook />,
+      name: "Facebook",
+      link: "https://www.facebook.com/cdcconstructionltd",
+    },
+    {
+      id: 2,
+      icon: <Instagram />,
+      name: "Instagram",
+      link: "https://www.instagram.com/cdc.constructionuk",
+    },
+    {
+      id: 3,
+      icon: <Linkedin />,
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/company/creative-design-construction-limited",
+    },
+    {
+      id: 4,
+      icon: <Youtube />,
+      name: "Youtube",
+      link: "https://www.youtube.com/channel/UCnHvmTVf2_iu4sXY9pzW7XA",
+    },
+  ];
   const { jsxDataA, jsxDataB, name, desc, img, link } = hoverImageContext();
   const [isOpen, setIsOpen] = useState(false);
   const [isProject, setIsProject] = useState(false);
   const [navIsOpened, setNavIsOpened] = useState(false);
+
+  const handleMail = () => {
+    // You can add additional logic here if needed
+    window.top.location.href = `mailto:info@cdc.construction`;
+  };
 
   const checkProject = () => {
     if (isProject) {
@@ -53,7 +85,12 @@ const Navbar = () => {
       <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
         <div className="w-full flex justify-between h-14 items-center">
           <div className="h-full flex items-center gap-x-4 text-[#242A3D]">
-            <a href="tel:07515058788" className="flex gap-1 text-sm">
+            <a
+              target="_top"
+              href="tel:02080043327"
+              aria-label="020 8004 3327"
+              className="flex gap-1 text-sm"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -63,41 +100,48 @@ const Navbar = () => {
                 <path d="M14.414 7l3.293-3.293a1 1 0 00-1.414-1.414L13 5.586V4a1 1 0 10-2 0v4.003a.996.996 0 00.617.921A.997.997 0 0012 9h4a1 1 0 100-2h-1.586z" />
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
               </svg>
-              <span className="hidden sm:flex">+44 7515058788</span>
+              <span className="hidden sm:flex">020 8004 3327</span>
             </a>
-            <a
+            <Link
+              onClick={handleMail}
+              data-address="info@bushcraftlondon.co.uk"
+              aria-label="info@cdc.construction"
               href="mailto:info@cdc.construction"
-              className="flex gap-1 items-center"
+              className=" cursor-pointer flex gap-1 items-center"
             >
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2.106 6.447A2 2 0 001 8.237V16a2 2 0 002 2h14a2 2 0 002-2V8.236a2 2 0 00-1.106-1.789l-7-3.5a2 2 0 00-1.788 0l-7 3.5zm1.48 4.007a.75.75 0 00-.671 1.342l5.855 2.928a2.75 2.75 0 002.46 0l5.852-2.926a.75.75 0 10-.67-1.342l-5.853 2.926a1.25 1.25 0 01-1.118 0l-5.856-2.928z"
+                  clipRule="evenodd"
+                />
+              </svg>
               <span className="hidden sm:flex">info@cdc.construction</span>
-            </a>
+            </Link>
           </div>
           <div className="flex items-center gap-x-2.5 -mx-2 text-[#242A3D] children:p-2 children:border children:border-x-gray-200 dark:children:border-gray-800 children:bg-gray-100 dark:children:bg-gray-900 children:rounded-md">
-            <a
-              target="_blank"
-              rel="noreferer"
-              href="https://www.facebook.com/cdcconstructionltd"
-              className="h-6 w-6 transition ease-linear text-[#242A3D] hover:text-pink-700"
-            >
-              <Facbook
-                className={"transition ease-linear hover:text-pink-700"}
-              />
-            </a>
-            <a
+            {/* Socail Medai Link */}
+            {SocialLinks.map((links) => (
+              <a
+                aria-label={`CDC ${links.name}`}
+                target="_blank"
+                rel="noreferer"
+                href={links.link}
+                className="h-6 w-6 transition ease-linear text-[#242A3D] hover:text-pink-700"
+              >
+                {links.icon}
+                {/* <
+                  className={"transition ease-linear hover:text-pink-700"}
+                /> */}
+              </a>
+            ))}
+            {/* <a
+              aria-label="CDC Instagram "
               target="_blank"
               rel="noreferer"
               href="https://www.instagram.com/cdc.constructionuk/"
@@ -106,7 +150,7 @@ const Navbar = () => {
               <Instagram
                 className={"transition ease-linear hover:text-pink-700"}
               />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
@@ -154,7 +198,7 @@ const Navbar = () => {
               >
                 <div className="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] md:py-8">
                   <Link
-                    href={""}
+                    href="/Services"
                     className={`flex items-center relative text-base duration-300 ease-linear font-semibold text-[#222222] hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white ${
                       isOpen
                         ? "after:absolute after:w-full after:bg-white after:scale-100"
@@ -233,7 +277,7 @@ const Navbar = () => {
                     type="button"
                     className="flex items-center text-base w-full relative duration-300 ease-linear font-semibold text-[#222222] hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
                   >
-                    Company
+                    Portfolio
                     <svg
                       className={`flex-shrink-0 ms-2 duration-300 ease-linear w-2.5 h-2.5 ${
                         isProject ? "rotate-180" : ""
@@ -267,18 +311,18 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
-                >
-                  Work
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/Team"
                   className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
                 >
                   Team
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ContactUs"
+                  className="relative py-2.5 text-base duration-300 font-semibold text-[#222222] ease-linear hover:text-white after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-white"
+                >
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -291,7 +335,7 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div aria-hidden="true" className="flex items-center lg:hidden">
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => {
                 toggleNavbar();

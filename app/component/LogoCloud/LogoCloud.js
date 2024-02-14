@@ -1,6 +1,7 @@
 import { handleGetImagesIntoDB } from "@/actions/logoCloudAction";
 import Image from "next/image";
 import React from "react";
+import { LOGOS } from "@/app/data/data";
 
 const LogoItem = ({ logoImg, name }) => {
   return (
@@ -26,18 +27,22 @@ const LogoCloudSection = () => {
     getLogo();
   }, []);
   return (
-    <section className="py-20">
+    <section className="py-8">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-10">
         {/* <div className="text-center space-y-6 max-w-2xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900  capitalize">
             Trusted by companies like
           </h1>
         </div> */}
-        <div className="flex justify-center flex-wrap gap-4">
-          {logoImages &&
+        <div className="flex justify-center flex-wrap">
+          {logoImages.length >0 ? 
             logoImages.map((logo) => (
               <LogoItem key={logo.asset_id} logoImg={...logo} />
-            ))}
+            )) : 
+            LOGOS.map((logo) =>  (
+              <LogoItem key={logo.id} logoImg={...logo}/>
+            ))
+          }
         </div>
       </div>
     </section>

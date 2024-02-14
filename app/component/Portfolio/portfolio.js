@@ -8,7 +8,7 @@ const PortfolioItem = ({ title, description, project, image, link }) => {
     <>
       <Link
         className="group sm:flex rounded-xl border-solid border-gray-200 border-2"
-        href={`/portfolio/${link}`}
+        href={`/Projects/${link}`}
       >
         <div className="flex-shrink-0 relative rounded-xl overflow-hidden w-full h-[200px] sm:w-[250px] sm:h-[350px]">
           <Image
@@ -30,9 +30,7 @@ const PortfolioItem = ({ title, description, project, image, link }) => {
             <h3 className="text-lg sm:text-2xl font-semibold  group-hover:text-blue-600 text-[#242A3D] dark:group-hover:text-blue-800">
               {title}
             </h3>
-            <p className="mt-2 text-gray-600 dark:text-gray-400">
-              {description}
-            </p>
+            <p className="mt-2 text-gray-600">{description}</p>
 
             <div className="mt-5 sm:mt-auto">
               {/* <!-- Avatar --> */}
@@ -85,7 +83,7 @@ const Portfolio = () => {
           {/* <!-- Grid --> */}
           <div className="grid lg:grid-cols-2 gap-6">
             {/* <!-- Card --> */}
-            {PORTFOLIO.map((portfolio) => (
+            {PORTFOLIO.filter((item) => item.home).map((portfolio) => (
               <PortfolioItem key={portfolio.id} {...portfolio} />
             ))}
             {/* <!-- End Card --> */}

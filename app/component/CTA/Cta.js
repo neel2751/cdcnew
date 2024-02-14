@@ -1,5 +1,6 @@
 import Image from "next/image";
-import CTA from "../../../public/images/cta.png";
+import CTA from "../../../public/images/catbg.svg";
+import Link from "next/link";
 
 const Cta = () => {
   return (
@@ -9,8 +10,10 @@ const Cta = () => {
           <div className="absolute right-0 top-0 h-full w-full flex justify-end ">
             <Image
               className="h-full w-full object-cover rounded-md"
+              // priority
+              loading="lazy"
               src={CTA}
-              alt="check"
+              alt="Call To Action Background Image"
               height={500}
               width={500}
             />
@@ -23,23 +26,23 @@ const Cta = () => {
             </div>
           </div> */}
           <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
-            <h1 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-blue-950 dark:text-white">
-              Transform your{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-br from-blue-600 from-20% via-indigo-400 via-30% to-teal-600">
-                vision into reality
-              </span>{" "}
-              with our help.
+            <h1 className="text-3xl/tight sm:text-4xl/tight md:text-4xl/tight font-bold text-blue-950 dark:text-white">
+              Transform your vision into reality with our help.
             </h1>
-            <p className="text-gray-700 dark:text-gray-300">
+            <p className="text-gray-700 font-medium dark:text-gray-300">
               Ready to turn your vision into solid ground? We're more than
               builders, we're partners. Let's collaborate, innovate, and craft a
               space that exceeds your wildest dreams. Contact us today and build
               together.
             </p>
             <div className="mx-auto max-w-md sm:max-w-xl flex justify-center">
-              <button className="outline-none h-12 px-5 rounded-xl bg-blue-600 text-white flex items-center">
-                Get In touch
-              </button>
+              <Link
+                href="/ContactUs"
+                className="outline-none h-12 px-5 rounded-xl hover:bg-blue-900 delay-75 transition ease-in-out bg-blue-600 text-white flex items-center"
+              >
+                Get a free quote Request a call back
+                {/* Implement this new features for better user experiences.. */}
+              </Link>
             </div>
           </div>
         </div>

@@ -1,25 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import LetterDark from "../../../public/images/letterbox.svg";
-import LetterLight from "../../../public/images/letterlight.svg";
-import CDCLogo from "../../../public/images/cdc_logo.png";
+import LetterLight from "../../../public/images/letterbox.svg";
+import CDCLogo from "../../../public/images/Logo_New.svg";
 import { FOOTERBLOCKS } from "@/app/data/data";
 
-import {
-  FooterFacbook,
-  FooterInstagram,
-  Twitter,
-  Linkedin,
-} from "../../../public/images/social/icons";
+import { Facbook, Instagram } from "../../../public/images/social/icons";
 import Img from "../Img/Img";
+import { useState } from "react";
+import { newsLetterData } from "@/actions/ipAddressAction";
+import LogoCloudSection from "../LogoCloud/LogoCloud";
 
 const FooterItem = ({ text, link }) => {
   return (
     <li>
       <Link
         href={link}
-        className="duration-200 hover:text-blue-600 dark:hover:text-blue-500"
+        className="duration-200 hover:text-black hover:font-semibold"
       >
         {text}
       </Link>
@@ -30,9 +27,7 @@ const FooterItem = ({ text, link }) => {
 const FooterBlockItem = ({ title, items }) => {
   return (
     <div className="space-y-6">
-      <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-        {title}
-      </h1>
+      <h1 className="text-lg font-semibold text-gray-900 ">{title}</h1>
       <ul className="space-y-3">
         {items.map((item) => (
           <FooterItem key={item.id} {...item} />
@@ -43,34 +38,59 @@ const FooterBlockItem = ({ title, items }) => {
 };
 
 const Footer = () => {
-  return (
-    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300">
-      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 grid grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 py-20">
-        <div className="space-y-6 col-span-2">
-          <Link href="#">
-            <span className="text-transparent bg-clip-text bg-gradient-to-tr from-blue-800 to-indigo-400 font-bold text-2xl">
-              <Img
-                image={CDCLogo}
-                alt="CDC LOGO"
-                cls="xl:w-9/12 md:w-7/12 sm:w-6/12"
-              />
-            </span>
-          </Link>
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState(false);
+  const handleNewLetter = async (e) => {
+    e.preventDefault();
+    if (!email) return alert("Please Enter your email...");
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      return alert(
+        "Please enter valid email address so we can get back to you"
+      );
+    }
+    try {
+      const response = await newsLetterData(email);
+      if (response.success) {
+        setMessage(true);
+        setEmail("");
+        setTimeout(() => {
+          setMessage("");
+        }, 2000);
 
-          <div className="max-w-lg">
+        // alert("You have successfully subscribed to our Newsletter!");
+      }
+    } catch (e) {
+      console.log("Error", e);
+    }
+  };
+  return (
+    <footer className="bg-[#9ED0E0] text-[#242A3D]">
+      <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 grid grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-16 pt-20">
+        <div className="space-y-6 col-span-2">
+          <div className="flex items-center min-w-max">
+            <Link
+              href="/"
+              className="text-xl font-semibold w-4/12 flex items-center gap-x-2"
+            >
+              <Img image={CDCLogo} cls="9/12" alt="cdc_logo" />
+            </Link>
+          </div>
+
+          <div className="xl:max-w-lg w-fit ">
             <a
+              className="group"
               target="_blank"
               rel="noopener"
               href="https://maps.app.goo.gl/qbBpiJ11NAzBEQHM9"
             >
-              <div className="flex gap-3 p-1">
+              <div className="group flex gap-3 p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 group-hover:text-black"
                 >
                   <path
                     strokeLinecap="round"
@@ -83,22 +103,23 @@ const Footer = () => {
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <h2>
+                <h2 className="font-semibold group-hover:text-black">
                   595a Cranbrook Road, <br />
                   Ilford, IG2 6JZ, <br />
                   United Kingdom
                 </h2>
               </div>
             </a>
-            <a href="tel:07515058788">
-              <div className="flex gap-3 p-1">
+
+            <a className="group" href="tel:02080043327">
+              <div className="flex gap-3 p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-6 h-6 group-hover:text-black"
                 >
                   <path
                     strokeLinecap="round"
@@ -107,11 +128,14 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h2>+44 7515058788</h2>
+                <h2 className="font-semibold group-hover:text-black">
+                  020 8004 3327
+                </h2>
               </div>
             </a>
-            <a href="mailto:info@cdc.construction">
-              <div className="flex gap-3 p-1">
+
+            <a className="group" href="mailto:info@cdc.construction">
+              <div className="flex gap-3 p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -127,7 +151,9 @@ const Footer = () => {
                   />
                 </svg>
 
-                <h2>info@cdc.construction</h2>
+                <h2 className="font-semibold group-hover:text-black">
+                  info@cdc.construction
+                </h2>
               </div>
             </a>
           </div>
@@ -145,27 +171,88 @@ const Footer = () => {
             height={100}
             width={100}
           />
-          <h1 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+          <h1 className="text-sm font-semibold text-gray-900 ">
             Want CDC updates sent straight to your inbox?
           </h1>
-          <form className="w-full max-w-2xl flex flex-col sm:flex-row gap-3">
+          <div className="w-full max-w-2xl flex flex-col sm:flex-row gap-3">
             <input
+              required
               type="email"
-              placeholder="We saved a spot for your email"
-              className="px-5 py-2.5 rounded-md outline-none flex-1 bg-gray-200 dark:bg-gray-800"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="We spot for your email"
+              className="focus:border-[#242A3D] border-2 px-5 py-2.5 rounded-md text-sm font-medium  outline-none flex-1 bg-gray-200 "
             />
-            <button className="outline-none w-full py-2.5 px-5 sm:w-max bg-blue-600 text-white rounded-md flex items-center justify-center">
+            <button
+              onClick={handleNewLetter}
+              className="outline-none w-full py-2.5 px-5 sm:w-max bg-[#242A3D] text-white rounded-md flex items-center justify-center"
+            >
               Subscribe
             </button>
-          </form>
+          </div>
+          {message && (
+            <div
+              id="toast-default"
+              className="flex items-center w-full max-w-xs p-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800"
+              role="alert"
+            >
+              <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
+                <svg
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 18 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15.147 15.085a7.159 7.159 0 0 1-6.189 3.307A6.713 6.713 0 0 1 3.1 15.444c-2.679-4.513.287-8.737.888-9.548A4.373 4.373 0 0 0 5 1.608c1.287.953 6.445 3.218 5.537 10.5 1.5-1.122 2.706-3.01 2.853-6.14 1.433 1.049 3.993 5.395 1.757 9.117Z"
+                  />
+                </svg>
+                <span className="sr-only">Fire icon</span>
+              </div>
+              <div className="ms-3 text-sm font-normal">
+                Welcome to our Family...
+              </div>
+              <button
+                type="button"
+                className="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+                data-dismiss-target="#toast-default"
+                aria-label="Close"
+              >
+                <span className="sr-only">Close</span>
+                <svg
+                  className="w-3 h-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 14"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
+          {/* {message && message} */}
         </div>
       </div>
+      <div>
+        <LogoCloudSection />
+      </div>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
-        <div className="w-full flex flex-col md:flex-row gap-4 items-center sm:justify-between py-3 border-t border-gray-200 dark:border-t-gray-800 text-gray-700 dark:text-gray-300">
+        <div className="w-full flex flex-col md:flex-row gap-4 items-center sm:justify-between py-3 border-t border-gray-200 dark:border-t-gray-800 text-gray-700">
           <div className="flex text-center sm:text-left sm:min-w-max">
             <p>
-              {" "}
-              © 2023 Creative Design & Construction Ltd. All right reserved{" "}
+              {`© ${new Date().getFullYear()} Creative Design & Construction Ltd. All right reserved`}
             </p>
           </div>
           <div className="flex justify-center sm:justify-end w-full gap-3">
@@ -174,7 +261,7 @@ const Footer = () => {
               aria-label="social link"
               rel="noreferer"
             >
-              <FooterFacbook
+              <Facbook
                 className={"transition ease-linear hover:text-pink-700"}
               />
             </a>
@@ -185,7 +272,7 @@ const Footer = () => {
               className="hover:text-white"
               style={{ color: "white" }}
             >
-              <FooterInstagram
+              <Instagram
                 className={"transition ease-linear hover:text-pink-700"}
               />
             </a>

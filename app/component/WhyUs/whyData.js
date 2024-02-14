@@ -25,21 +25,17 @@ const WhyData = ({ children }) => {
           ? "bg-white shadow-md border-2 border-dashed border-blue-500"
           : ""
       }  `}
-      id="tabs-with-card-item-3"
-      data-hs-tab="#tabs-with-card-3"
-      aria-controls="tabs-with-card-3"
-      role="tab"
     >
       <span className="flex ">
         <Image
           className={`cursor-pointer ${
             active === item.id ? styles.active : ""
           }`}
-          src={"/images/services/icon/2.svg"}
+          src={item.icon}
           alt="check svg"
           height={24}
           width={24}
-          style={{ height: "auto", width: "auto" }}
+          // style={{ height: "auto", width: "auto" }}
         />
         <span className="grow ms-6">
           <span
@@ -50,8 +46,8 @@ const WhyData = ({ children }) => {
             {item.name}
           </span>
           <span className="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200">
-            Reduce time and effort on building modern look design with Preline
-            only.
+            {/* Reduce time and effort on building modern look design with CDC only. */}
+            {item.description}
           </span>
         </span>
       </span>

@@ -31,16 +31,7 @@ const SubMenu = ({ children }) => {
       className="group flex gap-x-5 hover:bg-[#EAF3F5] rounded-lg p-4 text-gray-200  focus:outline-none focus:ring-1 focus:ring-gray-600"
       href={`/Services/Service/${item.link}`}
     >
-      <Image
-        src={item?.icon}
-        alt="new"
-        sizes="100vw"
-        style={{
-          width: "auto",
-        }}
-        width={24}
-        height={24}
-      />
+      <Image src={item?.icon} alt="new" width={24} height={24} />
       <div className="grow">
         <p className=" font-semibold text-base text-[#242A3D] group-hover:text-[#242A3D]">
           {item.name}
@@ -96,7 +87,7 @@ const Projects = () => {
         <a
           key={item.id}
           className="inline-flex gap-x-5 w-full p-4 text-gray-600 rounded-lg hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-          href="#"
+          href={item.link}
         >
           <svg
             className="flex-shrink-0 w-5 h-5 mt-1"

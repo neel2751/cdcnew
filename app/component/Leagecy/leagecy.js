@@ -3,7 +3,7 @@ import MetricsSection from "./metric";
 
 const Leagecy = () => {
   return (
-    <section className="xl:py-20">
+    <section className="pb-20 pt-28">
       <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16">
         <div className="space-y-6 xl:max-w-3xl max-w-xl">
           <h2 className="text-4xl font-semibold text-[#242A3D]">
@@ -25,7 +25,7 @@ const Leagecy = () => {
               {/* <!-- Stats --> */}
               <div className="lg:pe-6 xl:pe-12">
                 <p className="text-6xl font-bold leading-10 text-blue-600">
-                  90+
+                  105+
                   <span className="ms-1 inline-flex items-center gap-x-1 bg-gray-200 font-medium text-gray-800 text-xs leading-4 rounded-full py-0.5 px-2 dark:bg-gray-800 dark:text-gray-300">
                     <svg
                       className="flex-shrink-0 w-4 h-4"
@@ -37,10 +37,10 @@ const Leagecy = () => {
                     >
                       <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
                     </svg>
-                    +7% this month
+                    +12% this month
                   </span>
                 </p>
-                <p className="mt-2 sm:mt-3 text-gray-500">
+                <p className="mt-2 sm:mt-3 text-gray-600">
                   of the project we have Done.
                 </p>
               </div>
@@ -52,22 +52,22 @@ const Leagecy = () => {
               <div className="grid gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 sm:gap-8">
                 {/* <!-- Stats --> */}
                 <div>
-                  <p className="text-3xl font-semibold text-blue-600">99.95%</p>
-                  <p className="mt-1 text-gray-500">in fulfilling orders</p>
+                  <p className="text-3xl font-semibold text-blue-600">98.95%</p>
+                  <p className="mt-1 text-gray-600">in fulfilling projects</p>
                 </div>
                 {/* <!-- End Stats --> */}
 
                 {/* <!-- Stats --> */}
                 <div>
-                  <p className="text-3xl font-semibold text-blue-600">2,000+</p>
-                  <p className="mt-1 text-gray-500">partner with Government</p>
+                  <p className="text-3xl font-semibold text-blue-600">190+</p>
+                  <p className="mt-1 text-gray-600">partner with Government</p>
                 </div>
                 {/* <!-- End Stats --> */}
 
                 {/* <!-- Stats --> */}
                 <div>
-                  <p className="text-3xl font-semibold text-blue-600">85%</p>
-                  <p className="mt-1 text-gray-500">this year alone</p>
+                  <p className="text-3xl font-semibold text-blue-600">30+</p>
+                  <p className="mt-1 text-gray-600">year of experience</p>
                 </div>
                 {/* <!-- End Stats --> */}
               </div>
