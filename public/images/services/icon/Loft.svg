@@ -1,0 +1,33 @@
+<svg width="511" height="496" viewBox="0 0 511 496" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M33.0005 49C22.5003 22.5001 76.4932 -8.50004 94.4932 40.9998" stroke="black" stroke-width="15" stroke-linecap="round"/>
+<path d="M62.4952 79.5005C47.4897 117.501 -12 76.5 32.4929 49.5005" stroke="black" stroke-width="15" stroke-linecap="round"/>
+<path d="M98.1619 41.6118C148.5 36 136.498 131.5 62.5047 80.0002" stroke="black" stroke-width="15" stroke-linecap="round"/>
+<path d="M40 464.5H9.03305C8.46803 464.5 8.01362 464.045 8.04521 463.48C9.2056 442.761 25.7677 405.876 84 416.5C106.5 422.5 114.5 438 156 419C169.5 412.5 185.5 430 202.5 430C218 430 229.5 395.5 307 431.5C310.135 432.597 324.359 431.188 356.66 417.703C360.635 416.043 365.152 416.404 368.912 418.504C387.357 428.801 420.407 442.01 441.5 432C470.791 418.099 497.124 410.606 503.369 463.36C503.439 463.952 502.979 464.5 502.383 464.5H60" stroke="black" stroke-width="15" stroke-linecap="round"/>
+<path d="M258.789 120.834L417.898 388.233C418.493 389.233 417.773 390.5 416.609 390.5H98.3909C97.2273 390.5 96.5068 389.233 97.1018 388.233L256.211 120.834C256.792 119.856 258.208 119.856 258.789 120.834Z" stroke="black" stroke-width="15"/>
+<path d="M465.5 418L448 389.5M50 414L226.644 120.082M239.582 98.5523L251.373 75.9205C253.179 72.4547 258.084 72.3072 260.095 75.6583L435.5 368" stroke="black" stroke-width="16.6337" stroke-linecap="round"/>
+<circle cx="40.5" cy="288" r="24" fill="black"/>
+<path d="M303 368H311.5C312.052 368 312.5 367.552 312.5 367V257C312.5 256.448 312.052 256 311.5 256H201.5C200.948 256 200.5 256.448 200.5 257V367C200.5 367.552 200.948 368 201.5 368H280.311" stroke="black" stroke-width="15" stroke-linecap="round"/>
+<rect x="112.5" y="192" width="16" height="105" rx="8" fill="black"/>
+<rect x="248.5" y="257" width="16" height="109" rx="8" fill="black"/>
+<rect x="202" y="319.5" width="16" height="109" rx="8" transform="rotate(-90 202 319.5)" fill="black"/>
+<rect x="194.5" y="233" width="16" height="126" rx="8" transform="rotate(-90 194.5 233)" fill="black"/>
+<rect x="220.5" y="184" width="16" height="72" rx="8" transform="rotate(-90 220.5 184)" fill="black"/>
+<rect x="206.5" y="208" width="16" height="49" rx="8" transform="rotate(-90 206.5 208)" fill="black"/>
+<rect x="312.5" y="344" width="16" height="78" rx="8" transform="rotate(-90 312.5 344)" fill="black"/>
+<rect x="344.5" y="376" width="16" height="65" rx="8" transform="rotate(-90 344.5 376)" fill="black"/>
+<rect x="309.5" y="312" width="16" height="35" rx="8" transform="rotate(-90 309.5 312)" fill="black"/>
+<rect x="314.5" y="288" width="16" height="39" rx="8" transform="rotate(-90 314.5 288)" fill="black"/>
+<rect width="16" height="78" rx="8" transform="matrix(0 -1 -1 0 206.5 344)" fill="black"/>
+<rect width="16" height="65" rx="8" transform="matrix(0 -1 -1 0 177.5 368)" fill="black"/>
+<rect width="16" height="35" rx="8" transform="matrix(0 -1 -1 0 176.5 320)" fill="black"/>
+<rect width="16" height="39" rx="8" transform="matrix(0 -1 -1 0 198.5 288)" fill="black"/>
+<rect x="160.5" y="148" width="16" height="73" rx="8" fill="black"/>
+<rect width="16" height="32" rx="8" transform="matrix(-1 0 0 1 128.5 152)" fill="black"/>
+<mask id="path-25-inside-1_492_595" fill="white">
+<rect x="104.5" y="120" width="80" height="40" rx="8"/>
+</mask>
+<rect x="104.5" y="120" width="80" height="40" rx="8" stroke="black" stroke-width="30" mask="url(#path-25-inside-1_492_595)"/>
+<path d="M376 72C376 81.2623 368.688 88.5 360 88.5C351.312 88.5 344 81.2623 344 72C344 62.7377 351.312 55.5 360 55.5C368.688 55.5 376 62.7377 376 72Z" stroke="black" stroke-width="15"/>
+<path d="M481 209C481 218.262 473.688 225.5 465 225.5C456.312 225.5 449 218.262 449 209C449 199.738 456.312 192.5 465 192.5C473.688 192.5 481 199.738 481 209Z" stroke="black" stroke-width="15"/>
+<path d="M486.447 32.1702C486.447 44.5857 476.646 54.2872 465 54.2872C453.354 54.2872 443.553 44.5857 443.553 32.1702C443.553 19.7547 453.354 10.0532 465 10.0532C476.646 10.0532 486.447 19.7547 486.447 32.1702Z" stroke="black" stroke-width="20.1064"/>
+</svg>

@@ -1,0 +1,19 @@
+<svg width="516" height="516" viewBox="0 0 516 516" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M34.9737 47.8474C23.0561 17.7703 84.3375 -17.4147 104.767 38.7673" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M68.4496 82.4652C51.4185 125.595 -16.1019 79.0597 34.3972 48.4155" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M108.931 39.462C166.064 33.0926 152.443 141.484 68.4604 83.0324" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M488.026 116.847C499.944 86.7703 438.662 51.5853 418.233 107.767" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M454.55 151.465C471.582 194.595 539.102 148.06 488.603 117.416" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M414.069 108.462C356.936 102.093 370.557 210.484 454.54 152.032" stroke="black" stroke-width="17.0249" stroke-linecap="round"/>
+<path d="M181.5 133L346.667 251.803C354.508 257.443 356.078 268.475 350.122 276.079V276.079C344.476 283.286 334.134 284.726 326.735 279.334L181.5 173.5" stroke="black" stroke-width="20.8037" stroke-linecap="round"/>
+<path d="M181.5 132.5L18.5819 250.791C10.2385 256.849 8.94828 268.786 15.8045 276.487V276.487C21.8454 283.272 32.0846 284.28 39.3324 278.803L180 172.5" stroke="black" stroke-width="20.8037" stroke-linecap="round"/>
+<path d="M37 282V491C37 500.389 44.6112 508 54 508H311C320.389 508 328 500.389 328 491V282" stroke="black" stroke-width="15"/>
+<path d="M139 508V354C139 344.611 146.611 337 156 337H208C217.389 337 225 344.611 225 354V508" stroke="black" stroke-width="15"/>
+<rect x="61.5" y="335.5" width="53" height="62" rx="19.5" stroke="black" stroke-width="15"/>
+<rect x="249.5" y="335.5" width="53" height="62" rx="19.5" stroke="black" stroke-width="15"/>
+<rect x="360.5" y="362.5" width="113" height="43" rx="19.5" stroke="black" stroke-width="15"/>
+<path d="M323 328H482C495.807 328 507 339.193 507 353V483C507 496.807 495.807 508 482 508H306.5" stroke="black" stroke-width="15"/>
+<rect x="353" y="432" width="128" height="15" rx="7.5" fill="black"/>
+<rect x="353" y="466" width="128" height="15" rx="7.5" fill="black"/>
+<rect x="151" y="423" width="25" height="18" rx="9" fill="black"/>
+</svg>
