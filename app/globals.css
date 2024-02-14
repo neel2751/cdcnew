@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('froala-editor/css/froala_editor.pkgd.min.css');
+@import url('froala-editor/css/froala_style.min.css');
+@import url('react-froala-wysiwyg/dist/react-froala-wysiwyg.css'); */
+
+:root {
+  --background-color: #EAF3F5
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-feature-settings: "liga" on,"clig" on,"dlig" off;
+  text-rendering: optimizeSpeed;
+  touch-action: manipulation;
+  background: var(--background-color)
+}
