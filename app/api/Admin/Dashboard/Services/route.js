@@ -3,13 +3,13 @@ import ServiceSection from "@/models/serviceModel";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: "30mb", // Set your desired value here
-    },
-  },
-};
+// export const config = {
+//   api: {
+//     bodyParser: {
+//       sizeLimit: "30mb", // Set your desired value here
+//     },
+//   },
+// };
 
 export async function POST(request) {
   try {
